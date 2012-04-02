@@ -25,7 +25,7 @@
     <listener>
         <listener-class>org.jboss.solder.resourceLoader.servlet.ResourceListener</listener-class>
     </listener>
-    
+
     <ordering>
         <!--
             It would be nice to guarantee that we come after the web-fragment.xml for any known CDI implementation, but this causes
@@ -68,11 +68,12 @@
     <filter>
         <filter-name>Catch Exception Filter</filter-name>
         <filter-class>org.jboss.solder.servlet.exception.CatchExceptionFilter</filter-class>
+        <async-supported>true</async-supported>
     </filter>
 
     <filter-mapping>
         <filter-name>Catch Exception Filter</filter-name>
         <url-pattern>/*</url-pattern>
-    </filter-mapping>    
+    </filter-mapping>
 
 </web-fragment>
